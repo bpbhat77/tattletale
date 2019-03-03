@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<chapter id="building">
+  <title>Building</title>
+
+  <section id="prerequisites">
+    <title>Prerequisites</title>
+    
+    <section id="jdk">
+      <title>Java Development Kit (JDK)</title>
+      <para>You must have one of the following JDKs installed in order to build the project:</para>
+
+      <itemizedlist spacing="compact">
+         <listitem>
+            <para>Sun JDK 1.5.x</para>
+         </listitem>
+         <listitem>
+            <para>Sun JDK 1.6.x</para>
+         </listitem>
+      </itemizedlist>
+
+      <para>Remember to ensure that "javac" and "java" are in your path (or symlinked).</para>
+
+      <programlisting>
+JAVA_HOME=/location/to/javahome
+export JAVA_HOME
+
+PATH=$JAVA_HOME/bin:$PATH
+export PATH
+      </programlisting>
+
+    </section>
+
+    <section id="ant">
+      <title>Apache Ant</title>
+      <para>You must have Apache Ant 1.8.1+ installed on your system.</para>
+      <para>Remember to ensure that "ant" are in your path (or symlinked).</para>
+
+      <programlisting>
+ANT_HOME=/location/to/anthome
+export ANT_HOME
+
+PATH=$ANT_HOME/bin:$PATH
+export PATH
+      </programlisting>
+
+    </section>
+
+    <section id="ivy">
+      <title>Apache Ivy</title>
+
+      <para>JBoss Tattletale uses Apache Ivy for dependency management. The build environment automatically
+        bootstrap the installation of Apache Ivy.</para>
+
+    </section>
+
+    <section id="git">
+      <title>GitHub</title>
+      <para>You must have git installed on your system.</para>
+      <para>Remember to ensure that "git" are in your path (or symlinked).</para>
+    </section>
+ 
+  </section>
+
+  <section id="obtainingthesource">
+    <title>Obtaining the source code</title>
+
+    <section id="github">
+      <title>GitHub</title>
+       <para>You can clone the repository onto your system by the following command. This automatically creates a directory 'tattletale' within your current directory. Please note that this would be a read-only directory.</para>
+       
+       <programlisting>
+git clone git://github.com/jesperpedersen/tattletale.git
+       </programlisting>
+       
+       <para>Should you want to edit the sources yourself, it is best to create your own fork of the repository and then clone that particular fork on your command line. Should you need help with Git and GitHub then read the help files (http://help.github.com/)</para>
+      
+    </section>
+
+  </section>
+
+  <section id="compiling">
+    <title>Compiling the source code</title>
+    <para>In order to build the JBoss Tattletale project you execute:</para>
+    <programlisting>
+ant &lt;target&gt;
+    </programlisting>
+    <para>where target is one of</para>
+    <itemizedlist>
+      <listitem>
+        <para>dist</para>
+        <para>Builds the distribution.</para>
+      </listitem>
+      <listitem>
+        <para>release</para>
+        <para>Builds the release archives.</para>
+      </listitem>
+      <listitem>
+        <para>doc</para>
+        <para>Builds the documentation for the project.</para>
+      </listitem>
+      <listitem>
+        <para>clean</para>
+        <para>Cleans the project of temporary files.</para>
+      </listitem>
+    </itemizedlist>
+    <para>See the full list of targets in the main build.xml file.</para>
+
+  </section>
+</chapter>

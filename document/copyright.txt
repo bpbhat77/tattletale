@@ -1,0 +1,6 @@
+Authors:
+--------
+Jesper Pedersen <jesper.pedersen@jboss.org>
+Jay Balunas <jbaluas@jboss.org>
+James Cobb <jcobb@redhat.com>
+Torben Jaeger <torben.jaeger@jit-consulting.de>
